@@ -1,0 +1,37 @@
+@media screen and (max-width: 768px) {
+    header {
+        font-size: 1.8em; /* Fonte menor para telas menores */
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Menu vertical em telas menores */
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%; /* Ocupa toda a largura */
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+
+    main {
+        flex-direction: column; /* Cards empilhados */
+        align-items: center;
+    }
+}
+
+/* Para telas com largura máxima de 480px (Celulares Pequenos) */
+@media screen and (max-width: 480px) {
+    header {
+        font-size: 1.5em; /* Ainda menor para celulares */
+        padding: 10px;
+    }
+
+    body {
+        font-size: 0.9em; /* Texto base um pouco menor */
+    }
+}

@@ -1,0 +1,107 @@
+.header-contato {
+    display: flex;
+    /* Torna os <li> flex-items */
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    /* Cria espaço entre os links */
+    padding: 10px 15px;
+    /* Simplificado: top/bottom left/right */
+    border-bottom: 1px solid var(--header-contato-border-bottom);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    a:hover {
+        color: var(--header-links-hover-color);
+    }
+
+    .header-contato-canais,
+    .header-contato-redessociais {
+        display: flex;
+        gap: 15px;
+    }
+}
+
+.header-cliente {
+    display: flex;
+    /* Torna os <li> flex-items */
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 15px;
+}
+
+#logo-horizontal {
+    height: 40px;
+}
+
+/* --- ESTILIZAÇÃO PARA O CAMPO DE BUSCA DE PRODUTOS--- */
+
+/* O contêiner do formulário */
+.header-cliente-busca {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    /* Faz o campo de busca ocupar o espaço disponível */
+    max-width: 500px;
+    /* Define uma largura máxima para não ficar muito grande em telas largas */
+    border: 1px solid var(--header-busca-border);
+    border-radius: 25px;
+    /* Bordas arredondadas para o contêiner */
+    overflow: hidden;
+    /* Garante que o botão não estoure das bordas arredondadas */
+    padding-left: 10px;
+
+    /* O campo de input */
+    input[type="search"] {
+        border: none;
+        outline: none;
+        /* Remove a borda azul ao focar */
+        width: 100%;
+        /* Ocupa todo o espaço dentro do form */
+        font-size: 1em;
+        background: transparent;
+    }
+
+    /* O botão de busca */
+    button {
+        border: none;
+        background: var(--header-busca-button-bg);
+        cursor: pointer;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+        background-color: var(--header-busca-button-hover:);
+    }
+
+    /* Estilo do ícone SVG */
+    button svg {
+        stroke: var(--header-busca-button-svg);
+        /* Cor da linha do ícone */
+    }
+
+}
+
+.header-cliente-acoes>ul {
+    display: flex;
+    /* Torna os <li> flex-items */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    /* Cria espaço entre os links */
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    a:hover {
+        color: var(--header-links-hover-color);
+    }
+    
+}

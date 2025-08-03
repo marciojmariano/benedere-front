@@ -1,0 +1,12 @@
+:root {
+    --body-bg: #666;
+    --header-contato-border-bottom: #ccc;
+    --header-links-hover-color: #87cc6e;
+    --menu-bg: #e75d23;
+    --menu-link-color: #fffced;
+    --menu-link-hover-bg: #87cc6e;
+    --header-busca-border: #ccc;
+    --header-busca-button-bg: #f0f0f0;
+    --header-busca-button-hover: #e0e0e0;
+    --header-busca-button-svg: #333;
+}

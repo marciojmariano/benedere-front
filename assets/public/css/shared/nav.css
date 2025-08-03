@@ -1,0 +1,36 @@
+/* Contêiner principal do menu */
+.menu {
+    background-color: var(--menu-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 10px 20px; /* Adiciona um espaçamento interno no menu */
+}
+
+/* A lista de links de navegação */
+.menu-paginas {
+    display: flex; /* Torna os <li> flex-items */
+    flex-wrap: wrap;
+    gap: 15px; /* Cria espaço entre os links */
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Estilizando os links individualmente para melhor interação */
+.menu-paginas a {
+    display: block; /* Permite que padding funcione corretamente */
+    padding: 8px 10px;
+    color: var(--menu-link-color);
+    font-weight: bold;
+    /* background-color:#e75d23;
+    border: 1px solid #e75d23; */
+    border-radius: 4px; /* Cantos levemente arredondados */
+    transition: background-color 0.3s, color 0.3s; /* Efeito suave na interação */
+}
+
+/* Efeito visual quando o mouse passa por cima */
+.menu-paginas a:hover {
+    background-color: var(--menu-link-hover-bg);
+    /* color: white; */
+}
