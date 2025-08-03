@@ -1,0 +1,190 @@
+/* CSS Reset (para remover da página margin e padding que não queremos */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+    color: #666;
+}
+
+/* Para remover estilos padrão de links e listas */
+a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #666;; /* Define uma cor padrão para os links */
+}
+
+ul {
+    list-style: none; /* Remove as bolinhas da lista */
+    margin: 0;
+    padding: 0;
+}
+
+.header-contato {
+    display: flex; /* Torna os <li> flex-items */
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px; /* Cria espaço entre os links */
+    padding: 10px 15px; /* Simplificado: top/bottom left/right */
+    border-bottom: 1px solid #ccc;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.header-contato a:hover, .header-cliente-acoes a:hover {
+    color: #87cc6e;
+}
+
+
+.header-contato-canais,
+.header-contato-redessociais {
+    display: flex;
+    gap: 15px;
+}
+
+.header-cliente {
+    display: flex; /* Torna os <li> flex-items */
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 15px;
+}
+
+#logo-horizontal {
+    height: 40px;
+}
+
+/* --- ESTILIZAÇÃO PARA O CAMPO DE BUSCA DE PRODUTOS--- */
+
+/* O contêiner do formulário */
+.header-cliente-busca {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Faz o campo de busca ocupar o espaço disponível */
+    max-width: 500px; /* Define uma largura máxima para não ficar muito grande em telas largas */
+    border: 1px solid #ccc;
+    border-radius: 25px; /* Bordas arredondadas para o contêiner */
+    overflow: hidden; /* Garante que o botão não estoure das bordas arredondadas */
+}
+
+/* O campo de input */
+.header-cliente-busca input[type="search"] {
+    border: none;
+    outline: none; /* Remove a borda azul ao focar */
+    width: 100%; /* Ocupa todo o espaço dentro do form */
+    font-size: 1em;
+    background: transparent;
+}
+
+/* O botão de busca */
+.header-cliente-busca button {
+    border: none;
+    background: #f0f0f0;
+    cursor: pointer;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.header-cliente-busca button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estilo do ícone SVG */
+.header-cliente-busca button svg {
+    stroke: #333; /* Cor da linha do ícone */
+}
+
+.header-cliente-acoes{
+    display: flex; /* Torna os <li> flex-items */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px; /* Cria espaço entre os links */
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+
+/* Contêiner principal do menu */
+.menu {
+    background-color: #e75d23;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 10px 20px; /* Adiciona um espaçamento interno no menu */
+}
+
+/* A lista de links de navegação */
+.menu-paginas {
+    display: flex; /* Torna os <li> flex-items */
+    flex-wrap: wrap;
+    gap: 15px; /* Cria espaço entre os links */
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Estilizando os links individualmente para melhor interação */
+.menu-paginas a {
+    display: block; /* Permite que padding funcione corretamente */
+    padding: 8px 10px;
+    color: #fffced;
+    font-weight: bold;
+    background-color:#e75d23;
+    border: 1px solid #e75d23;
+    border-radius: 4px; /* Cantos levemente arredondados */
+    transition: background-color 0.3s, color 0.3s; /* Efeito suave na interação */
+}
+
+/* Efeito visual quando o mouse passa por cima */
+.menu-paginas a:hover {
+    background-color: #87cc6e;
+    color: white;
+}
+
+.titulo-1 {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        font-size: 1.8em; /* Fonte menor para telas menores */
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Menu vertical em telas menores */
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%; /* Ocupa toda a largura */
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+
+    main {
+        flex-direction: column; /* Cards empilhados */
+        align-items: center;
+    }
+}
+
+/* Para telas com largura máxima de 480px (Celulares Pequenos) */
+@media screen and (max-width: 480px) {
+    header {
+        font-size: 1.5em; /* Ainda menor para celulares */
+        padding: 10px;
+    }
+
+    body {
+        font-size: 0.9em; /* Texto base um pouco menor */
+    }
+}
