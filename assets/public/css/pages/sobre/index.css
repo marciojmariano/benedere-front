@@ -1,0 +1,203 @@
+/* Container para centralizar conteúdo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Padding lateral para telas menores */
+}
+
+/* Estilos gerais para seções da página "Sobre" */
+.secao-sobre {
+    padding: 10px 0; /* Espaçamento vertical padrão */
+}
+
+/* Seção de Introdução */
+.secao-introducao {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.titulo-principal {
+    font-size: 3.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.logo-benedere {
+    max-width: 250px; /* Ajuste o tamanho do logo conforme necessário */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.subtitulo-historia {
+    font-size: 2rem;
+    color: #34495e;
+    margin-bottom: 25px;
+}
+
+.paragrafo-intro {
+    font-size: 1.15rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* Seção da História Detalhada */
+.secao-historia {
+    background-color: #fff;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.secao-historia p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Seção de Missão, Visão, Valores e Qualidade (MVVQ) */
+.secao-mvvq {
+    background-color: #eaf7ed; /* Um fundo suave para destacar */
+    padding: 80px 0;
+}
+
+.secao-mvvq .titulo-secao {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #27ae60; /* Cor de destaque para o título da seção */
+    margin-bottom: 50px;
+}
+
+.grid-mvvq {
+    display: grid;
+    /* 2 colunas em telas médias, 1 em pequenas, 4 em grandes */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Espaçamento entre os cards */
+}
+
+.mvvq-item {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mvvq-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.mvvq-icon {
+    width: 100px; /* Tamanho dos ícones */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.mvvq-titulo {
+    font-size: 1.8rem;
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+.mvvq-texto {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.mvvq-lista-valores {
+    list-style: none; /* Remove marcadores padrão */
+    padding: 0;
+    text-align: left; /* Alinha o texto da lista à esquerda */
+}
+
+.mvvq-lista-valores li {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px; /* Espaço para o marcador customizado */
+}
+
+.mvvq-lista-valores li:last-child {
+    margin-bottom: 0;
+}
+
+/* Marcador customizado para a lista de valores */
+.mvvq-lista-valores li::before {
+    content: '•'; /* Ou um ícone, como '✔️' */
+    color: #27ae60; /* Cor do marcador */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+}
+
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .grid-mvvq {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .titulo-principal {
+        font-size: 3rem;
+    }
+    .subtitulo-historia {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .secao-sobre {
+        padding: 40px 0;
+    }
+    .titulo-principal {
+        font-size: 2.5rem;
+    }
+    .subtitulo-historia {
+        font-size: 1.5rem;
+    }
+    .paragrafo-intro, .secao-historia p {
+        font-size: 1rem;
+    }
+    .secao-mvvq .titulo-secao {
+        font-size: 2.2rem;
+    }
+    .grid-mvvq {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+    .mvvq-item {
+        padding: 25px;
+    }
+    .mvvq-titulo {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-principal {
+        font-size: 2rem;
+    }
+    .subtitulo-historia {
+        font-size: 1.3rem;
+    }
+    .secao-mvvq .titulo-secao {
+        font-size: 1.8rem;
+    }
+    .mvvq-icon {
+        width: 80px;
+    }
+}

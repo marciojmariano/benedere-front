@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/png" href="assets/icone.png">
+        <title>Cadastro</title>
+        <!--Meta charset UTF8 é utilizado para informar ao navegador que o documento está codificado em UTF8, garantido que acentuações e caracteres especiais sejam apresentados corretamente-->
+        <meta charset="UTF-8">
+        <!--A meta tag <meta name="viewport" content="width=device-width, initial-scale=1.0"> controla como a página é dimensionada em dispositivos móveis:
+        width=device-width define que a largura da “viewport” (área visível da página) deve ser igual à largura do dispositivo em pixels CSS, evitando que o navegador “enxergue” uma página muito larga num celular e faça zoom out automático.
+        initial-scale=1.0 ajusta o zoom inicial para 100%, sem ampliar nem reduzir.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/index.css">
+    </head>
+    <body>
+        <div id="login-principal">
+            <div class="login-acoes">
+                <div id="login-instrucoes">
+                    <h1 class="titulo-1">
+                        Indentificação - 
+                        <small>Faça o seu login ou crie uma conta caso ainda não possua cadastro</small>
+                    </h1>
+                </div>
+
+            </div>
+
+        </div>
+        <form action="/entrar" method="POST">
+            <label for="usuario">Usuário:</label>
+            <input type="email" id="email" name="email" required placeholder="seuemail@dominio.com.br">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" minlength="6" maxlength="20" placeholder="senha min 6 max 20">
+            <!-- Botão para enviar TODOS os dados -->
+            <button type="submit">Entrar</button>
+        </form>
+    </body>
+</html>

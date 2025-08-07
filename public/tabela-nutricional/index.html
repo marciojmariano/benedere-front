@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image/png" href="assets/public/images/shared/folha.png">
+    <title>Benedere Comida de Verdade</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/../assets/public/css/pages/home/index.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="header-contato">
+            <div>
+                <ul class="header-contato-canais">
+                    <li><a href="fale-conosco.html" target="_blank"><i class="fa-solid fa-comment"></i> Fale Conosco</a>
+                    </li>
+                    <li><a href="tel:+5547999583976"><i class="fa-solid fa-phone"></i> Telefone: (47) 99958-3976</li>
+                    </a>
+                    <li><a href="https://wa.me/47999296663" target="_blank"><i class="fa-brands fa-whatsapp"></i>
+                            Whatsapp:: (47) 99958-3976</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="header-contato-redessociais">
+                    <li><a href="https://www.facebook.com/benederecomidadeverdade" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/benederecomidadeverdade/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-cliente">
+            <div class="header-cliente-logo">
+                <a href="index.html">
+                    <img id="logo-horizontal" src="assets/public/images/shared/LOGO benedere horizontal.png"
+                        alt="Benedere Comida de Verdade - Logo">
+                </a>
+            </div>
+            <form class="header-cliente-busca" role="search">
+                <input type="search" name="s" placeholder="Buscar comida de verdade..." aria-label="Campo de busca">
+                <button type="submit" aria-label="Buscar">
+                    <!-- Usando um SVG para o ícone de lupa, que é a melhor prática hoje -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </form>
+            <div class="header-cliente-acoes">
+                <ul>
+                    <li><a href="/public/login/index.html"><i class="fa-solid fa-user"></i> Login</a></li>
+                    <li><a href="/public/favoritos/index.html"><i class="fa-solid fa-heart"></i></a></li>
+                    <li><a href="/public/carrinho/index.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- Usando <ul> para a lista de links de navegação -->
+        <nav class="menu">
+            <ul class="menu-paginas">
+                <li><a href="/public/sobre/index.html">Sobre a Benedere</a></li>
+                <li><a href="/public/cardapio/index.html">Cardápio</a></li>
+                <li><a href="/public/dieta-personalizada/index.html">Dietas Personalizadas</a></li>
+                <li><a href="/public/tabela-nutricional/index.html">Tabela Nutricional</a></li>
+            </ul>
+        </nav>
+    </header> <!-- Fechei com header, que é mais semântico para um menu principal -->
+
+    <main id="conteudo-principal-nutricional">
+        <section id="tabelas-nutricionais" class="secao-tabelas-nutricionais">
+            <div class="container">
+                <h1 class="titulo-pagina">Tabelas Nutricionais Benedere</h1>
+                <p class="descricao-pagina">
+                    Aqui você encontra as informações nutricionais detalhadas de cada um dos nossos pratos, por porção
+                    de 100g.
+                </p>
+
+                <!-- Informações Gerais sobre Porções -->
+                <div class="info-geral-porcoes">
+                    <h2>Informações Gerais de Porções por Embalagem</h2>
+                    <ul>
+                        <li><strong>Marmitas com 200g:</strong> 2 Porções (100g = 1/2 unidade)</li>
+                        <li><strong>Marmitas com 300g:</strong> 3 Porções (100g = 1/3 unidade)</li>
+                        <li><strong>Marmitas com 400g:</strong> 4 Porções (100g = 1/4 unidade)</li>
+                    </ul>
+                </div>
+
+                <div class="lista-pratos-nutricionais">
+
+                    <!-- Prato: ISCAS DE FRANGO COM BATATA BAROA -->
+                    <div class="prato-nutricional-card">
+                        <h2 class="nome-prato-nutricional">Iscas de Frango com Batata Baroa</h2>
+                        <p class="info-porcao">Porções por embalagem: 2 | Porção: 100g (1/2 unidade)</p>
+                        <div class="tabela-nutricional-wrapper">
+                            <table class="tabela-nutricional">
+                                <thead>
+                                    <tr>
+                                        <th>Nutriente</th>
+                                        <th>100 g</th>
+                                        <th>% VD</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Valor energético (kcal)</td>
+                                        <td>106</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carboidratos (g)</td>
+                                        <td>10</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares totais (g)</td>
+                                        <td>3,3</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares adicionados (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Proteínas (g)</td>
+                                        <td>11</td>
+                                        <td>22</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras totais (g)</td>
+                                        <td>2,7</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras saturadas (g)</td>
+                                        <td>0,6</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras trans (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fibras alimentares (g)</td>
+                                        <td>1,4</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sódio (mg)</td>
+                                        <td>315</td>
+                                        <td>16</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="ingredientes-prato"><strong>Ingredientes:</strong> Batata baroa, peito de frango,
+                            molho de tomate, cebola, azeite de oliva, salsinha, amido de milho, sal, mostarda amarela e
+                            açafrão.</p>
+                        <p class="alerta-alergicos">NÃO CONTÉM GLÚTEN.</p>
+                    </div>
+
+                    <!-- Prato: ISCAS DE FRANGO ENSOPADO COM BATATA DOCE -->
+                    <div class="prato-nutricional-card">
+                        <h2 class="nome-prato-nutricional">Iscas de Frango Ensopado com Batata Doce</h2>
+                        <p class="info-porcao">Porções por embalagem: 2 | Porção: 100g (1/2 unidade)</p>
+                        <div class="tabela-nutricional-wrapper">
+                            <table class="tabela-nutricional">
+                                <thead>
+                                    <tr>
+                                        <th>Nutriente</th>
+                                        <th>100 g</th>
+                                        <th>% VD</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Valor energético (kcal)</td>
+                                        <td>106</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carboidratos (g)</td>
+                                        <td>10</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares totais (g)</td>
+                                        <td>3,3</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares adicionados (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Proteínas (g)</td>
+                                        <td>11</td>
+                                        <td>22</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras totais (g)</td>
+                                        <td>2,7</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras saturadas (g)</td>
+                                        <td>0,6</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras trans (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fibras alimentares (g)</td>
+                                        <td>1,4</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sódio (mg)</td>
+                                        <td>315</td>
+                                        <td>16</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="ingredientes-prato"><strong>Ingredientes:</strong> Batata doce, peito de frango, molho
+                            de tomate, cebola, salsinha, azeite de oliva, amido de milho, sal, mostarda amarela e
+                            açafrão.</p>
+                        <p class="alerta-alergicos">NÃO CONTÉM GLÚTEN.</p>
+                    </div>
+
+                    <!-- Prato: ESTROGONOFE DE FRANGO COM ARROZ -->
+                    <div class="prato-nutricional-card">
+                        <h2 class="nome-prato-nutricional">Estrogonofe de Frango com Arroz</h2>
+                        <p class="info-porcao">Porções por embalagem: 2 | Porção: 100g (1/2 unidade)</p>
+                        <div class="tabela-nutricional-wrapper">
+                            <table class="tabela-nutricional">
+                                <thead>
+                                    <tr>
+                                        <th>Nutriente</th>
+                                        <th>100 g</th>
+                                        <th>% VD</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Valor energético (kcal)</td>
+                                        <td>119</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carboidratos (g)</td>
+                                        <td>14</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares totais (g)</td>
+                                        <td>0,8</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares adicionados (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Proteínas (g)</td>
+                                        <td>8,6</td>
+                                        <td>17</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras totais (g)</td>
+                                        <td>2,8</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras saturadas (g)</td>
+                                        <td>0,6</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras trans (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fibras alimentares (g)</td>
+                                        <td>1,7</td>
+                                        <td>7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sódio (mg)</td>
+                                        <td>463</td>
+                                        <td>20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="ingredientes-prato"><strong>Ingredientes:</strong> Arroz integral, Peito de frango,
+                            molho de tomate, leite de castanha (água, castanha de caju, amêndoas e castanha do Pará),
+                            cebola, sal, cogumelo, conhaque, salsinha, azeite de oliva, mostarda amarela, pimenta do
+                            reino e óleo de girassol.</p>
+                        <p class="alerta-alergicos"><strong>ALÉRGICOS:</strong> CONTÉM AMÊNDOAS E CASTANHAS.</p>
+                        <p class="info-gluten">NÃO CONTÉM GLÚTEN.</p>
+                    </div>
+
+                    <!-- Prato: CARNE MOÍDA COM PURÊ DE AIPIM -->
+                    <div class="prato-nutricional-card">
+                        <h2 class="nome-prato-nutricional">Carne Moída com Purê de Aipim</h2>
+                        <p class="info-porcao">Porções por embalagem: 2 | Porção: 100g (1/2 unidade)</p>
+                        <div class="tabela-nutricional-wrapper">
+                            <table class="tabela-nutricional">
+                                <thead>
+                                    <tr>
+                                        <th>Nutriente</th>
+                                        <th>100 g</th>
+                                        <th>% VD</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Valor energético (kcal)</td>
+                                        <td>108</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carboidratos (g)</td>
+                                        <td>15</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares totais (g)</td>
+                                        <td>0</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares adicionados (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Proteínas (g)</td>
+                                        <td>7,1</td>
+                                        <td>14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras totais (g)</td>
+                                        <td>1,9</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras saturadas (g)</td>
+                                        <td>0,9</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras trans (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fibras alimentares (g)</td>
+                                        <td>0,9</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sódio (mg)</td>
+                                        <td>222</td>
+                                        <td>11</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="ingredientes-prato"><strong>Ingredientes:</strong> Aipim, carne bovina, molho de
+                            tomate, cebola, salsinha, amido de milho, manteiga ghee, sal, açafrão e óleo de girassol.
+                        </p>
+                        <p class="alerta-alergicos">NÃO CONTÉM GLÚTEN.</p>
+                    </div>
+
+                    <!-- Prato: CARNE MOÍDA COM BATATA DOCE -->
+                    <div class="prato-nutricional-card">
+                        <h2 class="nome-prato-nutricional">Carne Moída com Batata Doce</h2>
+                        <p class="info-porcao">Porções por embalagem: 2 | Porção: 100g (1/2 unidade)</p>
+                        <div class="tabela-nutricional-wrapper">
+                            <table class="tabela-nutricional">
+                                <thead>
+                                    <tr>
+                                        <th>Nutriente</th>
+                                        <th>100 g</th>
+                                        <th>% VD</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Valor energético (kcal)</td>
+                                        <td>88</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carboidratos (g)</td>
+                                        <td>9,1</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares totais (g)</td>
+                                        <td>3,1</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares adicionados (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Proteínas (g)</td>
+                                        <td>7,5</td>
+                                        <td>15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras totais (g)</td>
+                                        <td>2,3</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras saturadas (g)</td>
+                                        <td>0,8</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras trans (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fibras alimentares (g)</td>
+                                        <td>1,3</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sódio (mg)</td>
+                                        <td>223</td>
+                                        <td>11</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="ingredientes-prato"><strong>Ingredientes:</strong> Batata doce, carne bovina bovino,
+                            molho de tomate, cebola, salsinha, azeite de oliva, amido de milho, açafrão, óleo de
+                            girassol e sal.</p>
+                        <p class="alerta-alergicos">NÃO CONTÉM GLÚTEN.</p>
+                    </div>
+
+                    <!-- Prato: CARNE MOÍDA COM BATATA BAROA -->
+                    <div class="prato-nutricional-card">
+                        <h2 class="nome-prato-nutricional">Carne Moída com Batata Baroa</h2>
+                        <p class="info-porcao">Porções por embalagem: 3 | Porção: 100g (1/3 da unidade)</p>
+                        <div class="tabela-nutricional-wrapper">
+                            <table class="tabela-nutricional">
+                                <thead>
+                                    <tr>
+                                        <th>Nutriente</th>
+                                        <th>100 g</th>
+                                        <th>% VD</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Valor energético (kcal)</td>
+                                        <td>88</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carboidratos (g)</td>
+                                        <td>9,1</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares totais (g)</td>
+                                        <td>3,1</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares adicionados (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Proteínas (g)</td>
+                                        <td>7,5</td>
+                                        <td>15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras totais (g)</td>
+                                        <td>2,3</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras saturadas (g)</td>
+                                        <td>0,8</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras trans (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fibras alimentares (g)</td>
+                                        <td>1,3</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sódio (mg)</td>
+                                        <td>223</td>
+                                        <td>11</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="ingredientes-prato"><strong>Ingredientes:</strong> Batata baroa, patinho bovino, molho
+                            de tomate, cebola, salsinha, azeite de oliva, amido de milho, açafrão, óleo de girassol e
+                            sal.</p>
+                        <p class="alerta-alergicos">NÃO CONTÉM GLÚTEN.</p>
+                    </div>
+
+                    <!-- Prato: CARNE DE PANELA COM AIPIM -->
+                    <div class="prato-nutricional-card">
+                        <h2 class="nome-prato-nutricional">Carne de Panela com Aipim</h2>
+                        <p class="info-porcao">Porções por embalagem: 3 | Porção: 100g (1/3 da unidade)</p>
+                        <div class="tabela-nutricional-wrapper">
+                            <table class="tabela-nutricional">
+                                <thead>
+                                    <tr>
+                                        <th>Nutriente</th>
+                                        <th>100 g</th>
+                                        <th>% VD</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Valor energético (kcal)</td>
+                                        <td>127</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carboidratos (g)</td>
+                                        <td>15</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares totais (g)</td>
+                                        <td>0</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares adicionados (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Proteínas (g)</td>
+                                        <td>10</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras totais (g)</td>
+                                        <td>2,6</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras saturadas (g)</td>
+                                        <td>1,2</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras trans (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fibras alimentares (g)</td>
+                                        <td>0,8</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sódio (mg)</td>
+                                        <td>209</td>
+                                        <td>10</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="ingredientes-prato"><strong>Ingredientes:</strong> Aipim, carne bovina, cebola,
+                            manteiga ghee, amido de milho, sal, salsinha e açafrão.</p>
+                        <p class="alerta-alergicos">NÃO CONTÉM GLÚTEN.</p>
+                    </div>
+
+                    <!-- Prato: ESTROGONOFE DE CARNE COM BATATA E LEGUMES -->
+                    <div class="prato-nutricional-card">
+                        <h2 class="nome-prato-nutricional">Estrogonofe de Carne com Batata e Legumes</h2>
+                        <p class="info-porcao">Porções por embalagem: 3 | Porção: 100g (1/3 da unidade)</p>
+                        <div class="tabela-nutricional-wrapper">
+                            <table class="tabela-nutricional">
+                                <thead>
+                                    <tr>
+                                        <th>Nutriente</th>
+                                        <th>100 g</th>
+                                        <th>% VD</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Valor energético (kcal)</td>
+                                        <td>89</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carboidratos (g)</td>
+                                        <td>8,2</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares totais (g)</td>
+                                        <td>3</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares adicionados (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Proteínas (g)</td>
+                                        <td>5,7</td>
+                                        <td>11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras totais (g)</td>
+                                        <td>3,4</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras saturadas (g)</td>
+                                        <td>0,8</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras trans (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fibras alimentares (g)</td>
+                                        <td>1,8</td>
+                                        <td>7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sódio (mg)</td>
+                                        <td>256</td>
+                                        <td>13</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="ingredientes-prato"><strong>Ingredientes:</strong> Batata baroa, patinho bovino,
+                            cenoura, vagem, molho de tomate, couve flor, brocolis, leite de castanha (água, castanha de
+                            cajú, amêndoas e castanha do pará), cebola, conhaque, azeite de oliva, sal, mostarda
+                            amarela, salsinha, lemon pepper, e pimenta do reino.</p>
+                        <p class="alerta-alergicos"><strong>ALÉRGICOS:</strong> CONTÉM AMÊNDOAS E CASTANHAS.</p>
+                        <p class="info-gluten">NÃO CONTÉM GLÚTEN.</p>
+                    </div>
+
+                    <!-- Prato: CARNE MOÍDA COM NHOQUE -->
+                    <div class="prato-nutricional-card">
+                        <h2 class="nome-prato-nutricional">Carne Moída com Nhoque</h2>
+                        <p class="info-porcao">Porções por embalagem: 3 | Porção: 100g (1/3 da unidade)</p>
+                        <div class="tabela-nutricional-wrapper">
+                            <table class="tabela-nutricional">
+                                <thead>
+                                    <tr>
+                                        <th>Nutriente</th>
+                                        <th>100 g</th>
+                                        <th>% VD</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Valor energético (kcal)</td>
+                                        <td>130</td>
+                                        <td>7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carboidratos (g)</td>
+                                        <td>22</td>
+                                        <td>7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares totais (g)</td>
+                                        <td>2,3</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares adicionados (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Proteínas (g)</td>
+                                        <td>7,1</td>
+                                        <td>14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras totais (g)</td>
+                                        <td>1,4</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras saturadas (g)</td>
+                                        <td>0,6</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras trans (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fibras alimentares (g)</td>
+                                        <td>2,1</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sódio (mg)</td>
+                                        <td>220</td>
+                                        <td>11</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="ingredientes-prato"><strong>Ingredientes:</strong> Batata doce, carne bovina, farinha
+                            de mandioca, molho de tomate, cebola, salsinha, amido de milho, açafrão e óleo de girassol,
+                            sal e noz moscada.</p>
+                        <p class="alerta-alergicos">NÃO CONTÉM GLÚTEN.</p>
+                    </div>
+
+                    <!-- Prato: SOBRECOXA COM BATATA E LEGUMES -->
+                    <div class="prato-nutricional-card">
+                        <h2 class="nome-prato-nutricional">Sobrecoxa com Batata e Legumes</h2>
+                        <p class="info-porcao">Porções por embalagem: 3 | Porção: 100g (1/3 da unidade)</p>
+                        <div class="tabela-nutricional-wrapper">
+                            <table class="tabela-nutricional">
+                                <thead>
+                                    <tr>
+                                        <th>Nutriente</th>
+                                        <th>100 g</th>
+                                        <th>% VD</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Valor energético (kcal)</td>
+                                        <td>109</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carboidratos (g)</td>
+                                        <td>7,5</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares totais (g)</td>
+                                        <td>2,5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Açúcares adicionados (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Proteínas (g)</td>
+                                        <td>7,5</td>
+                                        <td>15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras totais (g)</td>
+                                        <td>5,4</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras saturadas (g)</td>
+                                        <td>1,4</td>
+                                        <td>7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gorduras trans (g)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fibras alimentares (g)</td>
+                                        <td>1,6</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sódio (mg)</td>
+                                        <td>292</td>
+                                        <td>15</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="ingredientes-prato"><strong>Ingredientes:</strong> Sobrecoxa de frango, batata doce,
+                            cenoura, vagem, couve flor, brocolis, cebola, azeite de oliva, sal, mostarda amarela,
+                            salsinha e tempero dry rub (sal marinho, açúcar mascavo, páprica defumada, cúrcuma, alho em
+                            pó e pimenta do reino gengibre em pó).</p>
+                        <!-- Não há informação explícita de glúten/alergênicos para este prato no documento -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://kit.fontawesome.com/dc950e0d8a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

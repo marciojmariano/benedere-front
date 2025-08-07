@@ -1,0 +1,61 @@
+/* Estilos para o campo de input type="file" */
+.form-field input[type="file"] {
+    /* Reset básico para garantir que se alinhe com outros inputs */
+    width: 100%;
+    padding: 10px; /* Um pouco menos de padding para não ficar muito grande */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #555;
+    box-sizing: border-box;
+    background-color: #f0f0f0; /* Um fundo leve para destacar */
+    cursor: pointer;
+}
+
+.form-field input[type="file"]:hover {
+    border-color: #27ae60;
+    background-color: #e8f5e9; /* Fundo mais claro ao passar o mouse */
+}
+
+/* Estilo para a informação sobre o arquivo */
+.file-info {
+    display: block; /* Garante que o texto fique em uma nova linha */
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 5px;
+    padding-left: 5px; /* Pequeno recuo */
+}
+
+/* Ajuste para o padding do form-field para inputs de arquivo */
+/* Isso pode ser necessário se o padding padrão do input[type="file"] for muito grande */
+.form-field input[type="file"]::-webkit-file-upload-button {
+    /* Estiliza o botão de "Escolher arquivo" no Chrome/Safari */
+    background-color: #27ae60;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.form-field input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #229a53;
+}
+
+.form-field input[type="file"]::file-selector-button {
+    /* Estiliza o botão de "Escolher arquivo" no Firefox */
+    background-color: #27ae60;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.form-field input[type="file"]::file-selector-button:hover {
+    background-color: #229a53;
+}

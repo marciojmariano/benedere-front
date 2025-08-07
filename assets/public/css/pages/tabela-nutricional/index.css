@@ -1,0 +1,219 @@
+/* Estilos para a Seção de Tabelas Nutricionais */
+.secao-tabelas-nutricionais {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.secao-tabelas-nutricionais .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.titulo-pagina {
+    font-size: 3rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.descricao-pagina {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Informações Gerais de Porções */
+.info-geral-porcoes {
+    background-color: #eaf7ed;
+    border: 1px solid #d4edda;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.info-geral-porcoes h2 {
+    font-size: 1.8rem;
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+.info-geral-porcoes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-geral-porcoes li {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.info-geral-porcoes li:last-child {
+    margin-bottom: 0;
+}
+
+/* Layout dos Cards de Pratos Nutricionais */
+.lista-pratos-nutricionais {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* 3 colunas em telas grandes, ajusta para menos */
+    gap: 30px;
+}
+
+.prato-nutricional-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prato-nutricional-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.nome-prato-nutricional {
+    font-size: 1.7rem;
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.info-porcao {
+    font-size: 0.95rem;
+    color: #777;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos da Tabela Nutricional */
+.tabela-nutricional-wrapper {
+    overflow-x: auto; /* Permite rolagem horizontal em telas pequenas */
+    margin-bottom: 20px;
+}
+
+.tabela-nutricional {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaçamento entre as células */
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    min-width: 300px; /* Garante que a tabela não fique muito estreita */
+}
+
+.tabela-nutricional th,
+.tabela-nutricional td {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+.tabela-nutricional thead th {
+    background-color: #27ae60;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tabela-nutricional tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fundo zebrado para melhor leitura */
+}
+
+.tabela-nutricional tbody tr:hover {
+    background-color: #e6ffe6; /* Destaque ao passar o mouse */
+}
+
+/* Estilos para Ingredientes e Alertas */
+.ingredientes-prato {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.alerta-alergicos, .info-gluten {
+    font-size: 0.9rem;
+    color: #e74c3c; /* Cor de alerta para alérgenos */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.info-gluten {
+    color: #27ae60; /* Cor para "Não contém glúten" */
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .lista-pratos-nutricionais {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .titulo-pagina {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .secao-tabelas-nutricionais {
+        padding: 40px 0;
+    }
+    .titulo-pagina {
+        font-size: 2rem;
+    }
+    .descricao-pagina {
+        font-size: 1rem;
+    }
+    .info-geral-porcoes h2 {
+        font-size: 1.5rem;
+    }
+    .prato-nutricional-card {
+        padding: 20px;
+    }
+    .nome-prato-nutricional {
+        font-size: 1.5rem;
+    }
+    .tabela-nutricional th,
+    .tabela-nutricional td {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .secao-tabelas-nutricionais .container {
+        padding: 0 15px;
+    }
+    .titulo-pagina {
+        font-size: 1.8rem;
+    }
+    .info-geral-porcoes {
+        padding: 15px;
+    }
+    .info-geral-porcoes h2 {
+        font-size: 1.3rem;
+    }
+    .info-geral-porcoes li {
+        font-size: 0.95rem;
+    }
+    .prato-nutricional-card {
+        border-radius: 8px;
+    }
+    .nome-prato-nutricional {
+        font-size: 1.3rem;
+    }
+    .info-porcao {
+        font-size: 0.85rem;
+    }
+    .ingredientes-prato, .alerta-alergicos, .info-gluten {
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="icon" type="image/png" href="assets/public/images/shared/folha.png">
+    <title>Benedere Comida de Verdade</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/../assets/public/css/pages/home/index.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="header-contato">
+            <div>
+                <ul class="header-contato-canais">
+                    <li><a href="fale-conosco.html" target="_blank"><i class="fa-solid fa-comment"></i> Fale Conosco</a>
+                    </li>
+                    <li><a href="tel:+5547999583976"><i class="fa-solid fa-phone"></i> Telefone: (47) 99958-3976</li>
+                    </a>
+                    <li><a href="https://wa.me/47999296663" target="_blank"><i class="fa-brands fa-whatsapp"></i>
+                            Whatsapp:: (47) 99958-3976</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="header-contato-redessociais">
+                    <li><a href="https://www.facebook.com/benederecomidadeverdade" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/benederecomidadeverdade/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-cliente">
+            <div class="header-cliente-logo">
+                <a href="index.html">
+                    <img id="logo-horizontal" src="assets/public/images/shared/LOGO benedere horizontal.png"
+                        alt="Benedere Comida de Verdade - Logo">
+                </a>
+            </div>
+            <form class="header-cliente-busca" role="search">
+                <input type="search" name="s" placeholder="Buscar comida de verdade..." aria-label="Campo de busca">
+                <button type="submit" aria-label="Buscar">
+                    <!-- Usando um SVG para o ícone de lupa, que é a melhor prática hoje -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </form>
+            <div class="header-cliente-acoes">
+                <ul>
+                    <li><a href="/public/login/index.html"><i class="fa-solid fa-user"></i> Login</a></li>
+                    <li><a href="/public/favoritos/index.html"><i class="fa-solid fa-heart"></i></a></li>
+                    <li><a href="/public/carrinho/index.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- Usando <ul> para a lista de links de navegação -->
+        <nav class="menu">
+            <ul class="menu-paginas">
+                <li><a href="/public/sobre/index.html">Sobre a Benedere</a></li>
+                <li><a href="/public/cardapio/index.html">Cardápio</a></li>
+                <li><a href="/public/dieta-personalizada/index.html">Dietas Personalizadas</a></li>
+                <li><a href="/public/tabela-nutricional/index.html">Tabela Nutricional</a></li>
+            </ul>
+        </nav>
+    </header> <!-- Fechei com header, que é mais semântico para um menu principal -->
+    <main id="conteudo-principal-personalizacao">
+        <section id="personalizacao-dieta" class="secao-personalizacao">
+            <div class="container">
+                <h1 class="titulo-pagina">Personalize Sua Dieta Benedere</h1>
+                <p class="descricao-pagina">
+                    Conte-nos sobre suas preferências e necessidades para adaptarmos seu plano alimentar Benedere,
+                    garantindo que cada refeição seja perfeita para você.
+                </p>
+
+                <!-- ATENÇÃO: Adicione enctype="multipart/form-data" ao seu FORM para permitir o upload de arquivos! -->
+                <form id="form-personalizacao-dieta" class="form-dieta" enctype="multipart/form-data">
+                    <!-- Seção: Suas Informações -->
+                    <fieldset class="form-group">
+                        <legend>Suas Informações</legend>
+                        <p>Por favor, preencha seus dados para que possamos identificar seu plano.</p>
+                        <div class="form-field">
+                            <label for="nome-cliente">Seu Nome Completo:</label>
+                            <input type="text" id="nome-cliente" name="nomeCliente" required
+                                placeholder="Ex: Márcio José Mariano">
+                        </div>
+                        <div class="form-field">
+                            <label for="email-cliente">Seu Melhor E-mail:</label>
+                            <input type="email" id="email-cliente" name="emailCliente" required
+                                placeholder="Ex: seuemail@dominio.com">
+                        </div>
+                    </fieldset>
+
+                    <!-- NOVA SEÇÃO: Anexar Documentos -->
+                    <fieldset class="form-group">
+                        <legend>Anexar Documentos</legend>
+                        <p>Se você possui um plano alimentar prescrito por um nutricionista, anexe-o aqui para uma
+                            personalização ainda mais precisa.</p>
+                        <div class="form-field">
+                            <label for="plano-nutricional">Anexar Plano Nutricional (PDF, DOCX, JPG, PNG):</label>
+                            <input type="file" id="plano-nutricional" name="planoNutricional"
+                                accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+                            <small class="file-info">Tamanho máximo: 5MB. Formatos aceitos: PDF, DOC, DOCX, JPG, JPEG,
+                                PNG.</small>
+                        </div>
+                    </fieldset>
+
+                    <!-- Seção: Restrições Alimentares -->
+                    <fieldset class="form-group">
+                        <legend>Restrições Alimentares</legend>
+                        <p>Marque as opções que se aplicam a você. Isso nos ajuda a evitar ingredientes que podem causar
+                            desconforto ou reações.</p>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="restricao-gluten" name="restricao" value="gluten">
+                            <label for="restricao-gluten">Intolerância a Glúten</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="restricao-lactose" name="restricao" value="lactose">
+                            <label for="restricao-lactose">Intolerância a Lactose</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="restricao-oleaginosas" name="restricao" value="oleaginosas">
+                            <label for="restricao-oleaginosas">Alergia a Oleaginosas (castanhas, amendoim, etc.)</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="restricao-frutos-mar" name="restricao" value="frutos-mar">
+                            <label for="restricao-frutos-mar">Alergia a Frutos do Mar</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="restricao-ovo" name="restricao" value="ovo">
+                            <label for="restricao-ovo">Alergia a Ovo</label>
+                        </div>
+                        <div class="form-field">
+                            <label for="outras-restricoes">Outras restrições ou alergias (especifique):</label>
+                            <textarea id="outras-restricoes" name="outrasRestricoes" rows="3"
+                                placeholder="Ex: Alergia a pimenta, intolerância a soja..."></textarea>
+                        </div>
+                    </fieldset>
+
+                    <!-- Seção: Preferências Alimentares -->
+                    <fieldset class="form-group">
+                        <legend>Preferências Alimentares</legend>
+                        <p>Ajude-nos a criar refeições que você realmente ame!</p>
+                        <div class="form-field">
+                            <label for="tipo-dieta">Qual o seu tipo de dieta principal?</label>
+                            <select id="tipo-dieta" name="tipoDieta">
+                                <option value="">Selecione</option>
+                                <option value="onivora">Onívora (come de tudo)</option>
+                                <option value="vegetariana">Vegetariana (não come carne, mas pode comer laticínios/ovos)
+                                </option>
+                                <option value="vegana">Vegana (não come nenhum produto de origem animal)</option>
+                                <option value="low-carb">Low Carb</option>
+                                <option value="cetogenica">Cetogênica</option>
+                                <option value="paleo">Paleo</option>
+                                <option value="outra">Outra (especifique abaixo)</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="alimentos-evitar">Alimentos que você prefere evitar (mesmo sem
+                                restrição):</label>
+                            <textarea id="alimentos-evitar" name="alimentosEvitar" rows="3"
+                                placeholder="Ex: Brócolis, coentro, carne de porco, cebola..."></textarea>
+                        </div>
+                        <div class="form-field">
+                            <label for="alimentos-favoritos">Alimentos que você adora e gostaria de incluir
+                                mais:</label>
+                            <textarea id="alimentos-favoritos" name="alimentosFavoritos" rows="3"
+                                placeholder="Ex: Salmão, batata doce, abacate, frango..."></textarea>
+                        </div>
+                    </fieldset>
+
+                    <!-- Seção: Seus Objetivos e Rotina -->
+                    <fieldset class="form-group">
+                        <legend>Seus Objetivos e Rotina</legend>
+                        <p>Para que possamos alinhar a dieta aos seus objetivos de saúde e rotina diária.</p>
+                        <div class="form-field">
+                            <label for="objetivo-principal">Qual o seu objetivo principal com a dieta?</label>
+                            <select id="objetivo-principal" name="objetivoPrincipal">
+                                <option value="">Selecione</option>
+                                <option value="perda-peso">Perda de Peso</option>
+                                <option value="ganho-massa">Ganho de Massa Muscular</option>
+                                <option value="manutencao">Manutenção de Peso</option>
+                                <option value="saude-geral">Saúde e Bem-estar Geral</option>
+                                <option value="performance-esportiva">Performance Esportiva</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="refeicoes-dia">Quantas refeições você costuma fazer por dia?</label>
+                            <input type="number" id="refeicoes-dia" name="refeicoesDia" min="1" max="6" value="3">
+                        </div>
+                        <div class="form-field">
+                            <label for="observacoes-plano">Observações sobre seu plano alimentar atual ou preferências
+                                específicas:</label>
+                            <textarea id="observacoes-plano" name="observacoesPlano" rows="5"
+                                placeholder="Ex: Prefiro refeições mais leves à noite, preciso de lanches práticos para o trabalho, etc."></textarea>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit">Enviar Personalização</button>
+                        <p class="disclaimer">
+                            <small>
+                                *As informações fornecidas serão utilizadas para adaptar seu plano alimentar. Para
+                                orientações médicas ou nutricionais específicas, consulte um profissional de saúde.
+                            </small>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="https://kit.fontawesome.com/dc950e0d8a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

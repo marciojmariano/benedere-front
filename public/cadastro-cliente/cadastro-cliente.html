@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/png" href="assets/icone.png">
+        <title>Cadastro</title>
+        <!--Meta charset UTF8 é utilizado para informar ao navegador que o documento está codificado em UTF8, garantido que acentuações e caracteres especiais sejam apresentados corretamente-->
+        <meta charset="UTF-8">
+        <!--A meta tag <meta name="viewport" content="width=device-width, initial-scale=1.0"> controla como a página é dimensionada em dispositivos móveis:
+        width=device-width define que a largura da “viewport” (área visível da página) deve ser igual à largura do dispositivo em pixels CSS, evitando que o navegador “enxergue” uma página muito larga num celular e faça zoom out automático.
+        initial-scale=1.0 ajusta o zoom inicial para 100%, sem ampliar nem reduzir.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/index.css">
+    </head>
+    <body>
+        <a href="index.html">Voltar</a>
+        <h1>Cadastro de clientes da Benedere</h1>
+        <form action="/cadastrar" method="POST">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required placeholder="seuemail@gmail.com">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+            <br>
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+            <br>
+            <label for="genero">Genero:</label>
+            <select id="genero" name="genero">
+                <option value="f">Feminino</option>
+                <option value="m">Masculino</option>
+                <option value="o">Outros</option>
+            </select>
+            <label for="nascimento">Data de Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento">
+            <br>
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" placeholder="00.000-000">
+            <label for="rua">Rua:</label>
+            <input type="text" id="rua" name="rua">
+            <br>
+            <label for="numero">Número:</label>
+            <input type="text" id="numero" name="numero">
+            <br>
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro">
+            <label for="cidade">Cidade:</label>
+            <select id="cidade" name="cidade">
+                <option value="bn">Blumenau</option>
+                <option value="ga">Gaspar</option>
+                <option value="in">Indaial</option>
+            </select>  
+            <br>
+            <label for="complemento">Complemento:</label>
+            <br>
+            <textarea id="complemento" name="complemento" cols="100" rows="8"></textarea>
+            <br>
+            <!-- Botão para enviar TODOS os dados -->
+            <button type="submit">Cadastrar</button>
+        </form>
+    </body>
+</html>
