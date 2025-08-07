@@ -1,0 +1,103 @@
+/*
+  fonts.css - Definições de fontes para Titillium Web
+  Fontes localizadas em: assets/public/fonts/
+*/
+
+/* Titillium Web - Black (900) */
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../../fonts/TitilliumWeb-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Titillium Web - Bold (700) */
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../../fonts/TitilliumWeb-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Titillium Web - Bold Italic (700 Italic) */
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../../fonts/TitilliumWeb-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Titillium Web - Extra Light (200) */
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../../fonts/TitilliumWeb-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Titillium Web - Extra Light Italic (200 Italic) */
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../../fonts/TitilliumWeb-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Titillium Web - Italic (400 Italic - Regular Italic) */
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../../fonts/TitilliumWeb-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Titillium Web - Light (300) */
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../../fonts/TitilliumWeb-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Titillium Web - Light Italic (300 Italic) */
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../../fonts/TitilliumWeb-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Titillium Web - Regular (400) */
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../../fonts/TitilliumWeb-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Titillium Web - Semi Bold (600) */
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../../fonts/TitilliumWeb-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Titillium Web - Semi Bold Italic (600 Italic) */
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../../fonts/TitilliumWeb-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
