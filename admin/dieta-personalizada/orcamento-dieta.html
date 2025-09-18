@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image/png" href="../../assets/public/images/shared/folha.png">
+    <title>Benedere Comida de Verdade</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/public/css/pages/home/index.css">
+</head>
+
+<body>
+    <script src="../../assets/admin/js/orcamento-dieta.js"></script>
+    <header id="header">
+        <div class="header-contato">
+            <div>
+                <ul class="header-contato-canais">
+                    <li><a href="/public/fale-conosco/index.html" target="_blank"><i class="fa-solid fa-comment"></i>
+                            Fale Conosco</a>
+                    </li>
+                    <li><a href="tel:+5547999583976"><i class="fa-solid fa-phone"></i> Telefone: (47) 99958-3976</li>
+                    </a>
+                    <li><a href="https://wa.me/47999296663" target="_blank"><i class="fa-brands fa-whatsapp"></i>
+                            Whatsapp:: (47) 99958-3976</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="header-contato-redessociais">
+                    <li><a href="https://www.facebook.com/benederecomidadeverdade" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/benederecomidadeverdade/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-cliente">
+            <div class="header-cliente-logo">
+                <a href="../../index.html">
+                    <img id="logo-horizontal" src="../../assets/public/images/shared/LOGO benedere horizontal.png"
+                        alt="Benedere Comida de Verdade - Logo">
+                </a>
+            </div>
+            <form class="header-cliente-busca" role="search">
+                <input type="search" name="s" placeholder="Buscar comida de verdade..." aria-label="Campo de busca">
+                <button type="submit" aria-label="Buscar">
+                    <!-- Usando um SVG para o ícone de lupa, que é a melhor prática hoje -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </form>
+            <div class="header-cliente-acoes">
+                <ul>
+                    <li><a href="../login/index.html"><i class="fa-solid fa-user"></i> Login</a></li>
+                    <li><a href="../favoritos/index.html"><i class="fa-solid fa-heart"></i></a></li>
+                    <li><a href="../carrinho/index.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- Usando <ul> para a lista de links de navegação -->
+        <nav class="menu">
+            <ul class="menu-paginas">
+                <li><a href="../sobre/index.html">Sobre a Benedere</a></li>
+                <li><a href="../cardapio/index.html">Cardápio</a></li>
+                <li><a href="../dieta-personalizada/index.html">Dietas Personalizadas</a></li>
+                <li><a href="./index.html">Tabela Nutricional</a></li>
+            </ul>
+        </nav>
+    </header> <!-- Fechei com header, que é mais semântico para um menu principal -->
+    <main>
+        <section class="orcamento-pedidos">
+            <div class="container">
+                <h1>Orçamento de Pedidos Benedere</h1>
+                <form onsubmit="return false;"> <!-- Formulário começa aqui -->
+                    <p>Selecione o tipo de refeição:</p>
+                    <label>
+                        <input type="radio" name="tiporefeicao" value="almoco">
+                        Almoço
+                    </label>
+                    <label>
+                        <input type="radio" name="tiporefeicao" value="jantar">
+                        Jantar
+                    </label>
+                    <label>
+                        <input type="radio" name="tiporefeicao" value="indiferente">
+                        Indiferente
+                    </label>
+
+                    <label for="quantidaderefeicao">Quantidade de refeições:</label>
+                    <input type="number" id="quantidaderefeicao" min="1" value="0">
+
+                    <p>Selecione o produto e a quantidade para adicionar à lista.</p>
+                    <div class="form-calculo">
+                        <!-- Proteínas -->
+                        <div class="ingrediente">
+                            <label for="proteina">Escolha a proteína:</label>
+                            <select id="proteina">
+                                <option value="">-- Selecione uma proteína --</option>
+                                <option value="fg1">Filé de frango</option>
+                                <option value="fg2">Sobrecoxa de frango</option>
+                                <option value="px1">Filé de tilápia</option>
+                                <option value="px2">Filé de salmão</option>
+                                <option value="bv1">Patinho Moído</option>
+                                <option value="bv2">Filé mignon bovino</option>
+                                <option value="sn1">Filé mignon suíno</option>
+                            </select>
+                            <label for="quantidade-proteina">Quantidade:</label>
+                            <input type="number" id="quantidade-proteina" min="1" value="0">
+                            <button type="button" onclick="adicionarIngrediente('proteina')">Adicionar</button>
+                        </div>
+
+                        <!-- Carboidratos -->
+                        <div class="ingrediente">
+                            <label for="carboidrato">Escolha o carboidrato:</label>
+                            <select id="carboidrato">
+                                <option value="">-- Selecione um carboidrato --</option>
+                                <option value="cb1">Arroz</option>
+                                <option value="cb2">Batata Baroa</option>
+                                <option value="cb3">Batata Doce</option>
+                                <option value="cb4">Batata Inglesa</option>
+                                <option value="cb5">Purê de Batata Baroa</option>
+                                <option value="cb6">Purê de Batata Doce</option>
+                                <option value="cb7">Purê de Batata Inglesa</option>
+                            </select>
+                            <label for="quantidade-carboidrato">Quantidade:</label>
+                            <input type="number" id="quantidade-carboidrato" min="1" value="0">
+                            <button type="button" onclick="adicionarIngrediente('carboidrato')">Adicionar</button>
+                        </div>
+
+                        <!-- Vegetais -->
+                        <div class="ingrediente">
+                            <label for="legumes">Escolha os legumes:</label>
+                            <select id="legumes">
+                                <option value="">-- Selecione um legume --</option>
+                                <option value="lg1">Abóbrinha</option>
+                                <option value="lg2">Berinjela</option>
+                                <option value="lg3">Brócolis</option>
+                                <option value="lg4">Cenoura</option>
+                                <option value="lg5">Couve Flor</option>
+                                <option value="lg6">Vagem</option>
+                            </select>
+                            <label for="quantidade-legumes">Quantidade:</label>
+                            <input type="number" id="quantidade-legumes" min="1" value="0">
+                            <button type="button" onclick="adicionarIngrediente('legumes')">Adicionar</button>
+                        </div>
+
+                        <!-- Tabela de itens adicionados -->
+                        <h2>Itens Adicionados</h2>
+                        <table id="tabelaItens">
+                            <thead>
+                                <tr>
+                                    <th>Refeição</th>
+                                    <th>Ingrediente</th>
+                                    <th>Quantidade</th>
+                                    <th>Preço Unitário</th>
+                                    <th>Preço Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Os itens adicionados serão inseridos aqui -->
+                            </tbody>
+                        </table>
+
+                        <!-- Exibição dos totais -->
+                        <div class="totais">
+                            <p><strong>Total de Quantidades:</strong> <span id="totalQuantidade">0</span></p>
+                            <p><strong>Total Geral:</strong> <span id="totalPreco">R$ 0,00</span></p>
+                        </div>
+                    </div>
+                </form> <!-- Formulário termina aqui -->
+            </div>
+        </section>
+    </main>
+    <script src="https://kit.fontawesome.com/dc950e0d8a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
