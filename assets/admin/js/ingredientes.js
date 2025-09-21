@@ -29,10 +29,136 @@ function cadastrar($event) {
 function carregarIngredientesLocalStorage() {
     let ingredientesLocalStorage = localStorage.getItem("ingredientes");
     if (ingredientesLocalStorage == null) {
-        return []
+        //return []
+        let massaDados = massaDeDados();
+        localStorage.setItem("ingredientes", JSON.stringify(massaDados));
+        return massaDados;
     }
     let ingredientes = JSON.parse(ingredientesLocalStorage)
     return ingredientes;
+}
 
-
+function massaDeDados() {
+    return [
+        {
+            id: crypto.randomUUID(),
+            nome: "Filé de frango",
+            tipo: "proteina",
+            valor: 20.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Sobrecoxa de frango",
+            tipo: "proteina",
+            valor: 15.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Filé de tilápia",
+            tipo: "proteina",
+            valor: 25.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Filé de salmão",
+            tipo: "proteina",
+            valor: 40.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Patinho Moído",
+            tipo: "proteina",
+            valor: 30.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Filé mignon bovino",
+            tipo: "proteina",
+            valor: 50.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Filé mignon suíno",
+            tipo: "proteina",
+            valor: 35.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Arroz",
+            tipo: "carboidrato",
+            valor: 5.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Batata Baroa",
+            tipo: "carboidrato",
+            valor: 8.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Batata Doce",
+            tipo: "carboidrato",
+            valor: 7.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Batata Inglesa",
+            tipo: "carboidrato",
+            valor: 6.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Purê de Batata Baroa",
+            tipo: "carboidrato",
+            valor: 10.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Purê de Batata Doce",
+            tipo: "carboidrato",
+            valor: 9.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Purê de Batata Inglesa",
+            tipo: "carboidrato",
+            valor: 8.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Abóbrinha",
+            tipo: "legumes",
+            valor: 4.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Berinjela",
+            tipo: "legumes",
+            valor: 5.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Brócolis",
+            tipo: "legumes",
+            valor: 6.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Cenoura",
+            tipo: "legumes",
+            valor: 3.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Couve Flor",
+            tipo: "legumes",
+            valor: 7.0
+        },
+        {
+            id: crypto.randomUUID(),
+            nome: "Vagem",
+            tipo: "legumes",
+            valor: 4.0
+        }
+    ]
 }

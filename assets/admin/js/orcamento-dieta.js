@@ -1,28 +1,32 @@
-// Tabela de preços dos ingredientes
-const precosIngredientes = {
-    fg1: { nome: "Filé de frango", preco: 20.0 },
-    fg2: { nome: "Sobrecoxa de frango", preco: 15.0 },
-    px1: { nome: "Filé de tilápia", preco: 25.0 },
-    px2: { nome: "Filé de salmão", preco: 40.0 },
-    bv1: { nome: "Patinho Moído", preco: 30.0 },
-    bv2: { nome: "Filé mignon bovino", preco: 50.0 },
-    sn1: { nome: "Filé mignon suíno", preco: 35.0 },
-    cb1: { nome: "Arroz", preco: 5.0 },
-    cb2: { nome: "Batata Baroa", preco: 8.0 },
-    cb3: { nome: "Batata Doce", preco: 7.0 },
-    cb4: { nome: "Batata Inglesa", preco: 6.0 },
-    cb5: { nome: "Purê de Batata Baroa", preco: 10.0 },
-    cb6: { nome: "Purê de Batata Doce", preco: 9.0 },
-    cb7: { nome: "Purê de Batata Inglesa", preco: 8.0 },
-    lg1: { nome: "Abóbrinha", preco: 4.0 },
-    lg2: { nome: "Berinjela", preco: 5.0 },
-    lg3: { nome: "Brócolis", preco: 6.0 },
-    lg4: { nome: "Cenoura", preco: 3.0 },
-    lg5: { nome: "Couve Flor", preco: 7.0 },
-    lg6: { nome: "Vagem", preco: 4.0 }
-};
-
 let ingredientes = carregarIngredientesLocalStorage();
+
+// [
+//   {
+//     "id": "54b2bf8e-3289-4df3-8fb9-7003b3b88efc",
+//     "nome": "Grão de Bico",
+//     "tipo": "leguminosa",
+//     "valor": "15"
+//   },
+//   {
+//     "id": "255eb2b2-a6cf-4b81-9cc4-80f76c95c94d",
+//     "nome": "Arroz Negro",
+//     "tipo": "carboidrato",
+//     "valor": "10"
+//   },
+//   {
+//     "id": "b04b5c6b-9cbb-47b2-87b2-88a541a94877",
+//     "nome": "Salmão",
+//     "tipo": "proteina",
+//     "valor": "100"
+//   }
+// ]
+// Tabela de preços dos ingredientes
+const ingredientesCarboidratos = ingredientes.filter(ingrediente => ingrediente.tipo === "carboidrato");
+const ingredientesProteinas = ingredientes.filter(proteina => proteina.tipo === "proteina");
+const ingredientesLegumes = ingredientes.filter(legume => legume.tipo === "legumes");
+//const ingredientesLeguminosa = ingredientes.filter(leguminosa => leguminosa.tipo === "leguminosa");
+
+const selectIngredientes = document.getElementById("ingredientes");
 
 // Variáveis para armazenar os totais
 let totalQuantidade = 0;
@@ -88,4 +92,24 @@ function carregarIngredientesLocalStorage() {
     return ingredientes;
 
 
+}
+
+function definirIngredientes($event) {
+    //debugger
+    let tipo = $event.target.value;
+    if (tipo === "carboidrato") {
+        criarOptions(ingredientesCarboidratos);
+    } else if (tipo === "proteina") {
+        criarOptions(ingredientesProteinas);
+    }
+
+}
+
+function criarOptions(ingredientes) {
+    //<option value="arroz">Arroz</option>
+    selectIngredientes.innerHTML = "<option disabled selected>-- Selecione um ingrediente --</option>";
+    ingredientes.forEach(ingrediente => {
+        selectIngredientes.innerHTML += `<option value="arroz">${ingrediente.nome}</option>`
+
+    });
 }

@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/public/css/pages/home/index.css">
+    <script src="../../assets/admin/js/orcamento-dieta.js" defer></script>
 </head>
 
 <body>
-    <script src="../../assets/admin/js/orcamento-dieta.js"></script>
     <header id="header">
         <div class="header-contato">
             <div>
@@ -95,56 +95,31 @@
                     <p>Selecione o produto e a quantidade para adicionar à lista.</p>
                     <div class="form-calculo">
                         <!-- Proteínas -->
-                        <div class="ingrediente">
-                            <label for="proteina">Escolha a proteína:</label>
-                            <select id="proteina">
-                                <option value="">-- Selecione uma proteína --</option>
-                                <option value="fg1">Filé de frango</option>
-                                <option value="fg2">Sobrecoxa de frango</option>
-                                <option value="px1">Filé de tilápia</option>
-                                <option value="px2">Filé de salmão</option>
-                                <option value="bv1">Patinho Moído</option>
-                                <option value="bv2">Filé mignon bovino</option>
-                                <option value="sn1">Filé mignon suíno</option>
-                            </select>
-                            <label for="quantidade-proteina">Quantidade:</label>
-                            <input type="number" id="quantidade-proteina" min="1" value="0">
-                            <button type="button" onclick="adicionarIngrediente('proteina')">Adicionar</button>
-                        </div>
+
 
                         <!-- Carboidratos -->
-                        <div class="ingrediente">
-                            <label for="carboidrato">Escolha o carboidrato:</label>
-                            <select id="carboidrato">
-                                <option value="">-- Selecione um carboidrato --</option>
-                                <option value="cb1">Arroz</option>
-                                <option value="cb2">Batata Baroa</option>
-                                <option value="cb3">Batata Doce</option>
-                                <option value="cb4">Batata Inglesa</option>
-                                <option value="cb5">Purê de Batata Baroa</option>
-                                <option value="cb6">Purê de Batata Doce</option>
-                                <option value="cb7">Purê de Batata Inglesa</option>
-                            </select>
-                            <label for="quantidade-carboidrato">Quantidade:</label>
-                            <input type="number" id="quantidade-carboidrato" min="1" value="0">
-                            <button type="button" onclick="adicionarIngrediente('carboidrato')">Adicionar</button>
-                        </div>
+
 
                         <!-- Vegetais -->
-                        <div class="ingrediente">
-                            <label for="legumes">Escolha os legumes:</label>
-                            <select id="legumes">
-                                <option value="">-- Selecione um legume --</option>
-                                <option value="lg1">Abóbrinha</option>
-                                <option value="lg2">Berinjela</option>
-                                <option value="lg3">Brócolis</option>
-                                <option value="lg4">Cenoura</option>
-                                <option value="lg5">Couve Flor</option>
-                                <option value="lg6">Vagem</option>
+                        <div class="tipo">
+                            <label for="tipo">Slecione o tipo de ingrediente:</label>
+                            <select id="tipo" onchange="definirIngredientes(event)">
+                                <option value="" disabled selected>Selecione um tipo</option>
+                                <option value="proteina">Proteína</option>
+                                <option value="carboidrato">Carboidrato</option>
+                                <option value="legume">Legume</option>
+                                <option value="leguminosa">Leguminosa</option>
+
                             </select>
-                            <label for="quantidade-legumes">Quantidade:</label>
-                            <input type="number" id="quantidade-legumes" min="1" value="0">
-                            <button type="button" onclick="adicionarIngrediente('legumes')">Adicionar</button>
+                        </div>
+                        <div class="ingrediente">
+                            <label for="ingredientes">Escolha os ingredientes:</label>
+                            <select id="ingredientes">
+                                <option disabled selected>-- Selecione um ingrediente --</option>
+                            </select>
+                            <label for="quantidade-ingredientes">Quantidade:</label>
+                            <input type="number" id="quantidade-ingredientes" min="1" value="0">
+                            <button type="button" onclick="adicionarIngrediente('ingredientes')">Adicionar</button>
                         </div>
 
                         <!-- Tabela de itens adicionados -->
