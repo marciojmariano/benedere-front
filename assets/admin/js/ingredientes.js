@@ -5,6 +5,7 @@ console.table(ingredientes);
 
 
 function cadastrar($event) {
+    debugger
     $event.preventDefault(); //Garante que não vai enviar pra lugar nenhum os dados do form
     const campoTipo = document.getElementById("tipo");
     const campoNome = document.getElementById("nome");
@@ -162,3 +163,35 @@ function massaDeDados() {
         }
     ]
 }
+
+// Função para listar os ingredientes na pagina
+function listarIngredientesTabela() {
+    const ingredientes = carregarIngredientesLocalStorage();
+    const tabelaIngredientes = document.querySelector("#listaIngredientes tbody");
+    tabelaIngredientes.innerHTML = "";
+
+    ingredientes.forEach(ingrediente => {
+        const linha = document.createElement("tr");
+
+        const colunaNome = document.createElement("td");
+        colunaNome.textContent = ingrediente.nome;
+
+        const colunaTipo = document.createElement("td");
+        colunaTipo.textContent = ingrediente.tipo;
+
+        const colunaValor = document.createElement("td");
+        colunaValor.textContent = "R$ " + ingrediente.valor.toFixed(2).replace(".", ",");
+
+
+        linha.appendChild(colunaNome);
+        linha.appendChild(colunaTipo);
+        linha.appendChild(colunaValor);
+
+        tabelaIngredientes.appendChild(linha);
+    });
+}
+
+// Carrega os ingredientes na tabela ao carregar a página
+document.addEventListener("DOMContentLoaded", () => {
+    listarIngredientesTabela();
+});

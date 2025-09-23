@@ -73,7 +73,12 @@
     </header> <!-- Fechei com header, que é mais semântico para um menu principal -->
     <main>
         <section id="cadastro-ingredientes">
+            <h2>Cadastro de Ingredientes e Insumos</h2>
             <form onsubmit="cadastrar(event)">
+                <div>
+                    <label for="nome">Nome</label>
+                    <input id="nome" type="text">
+                </div>
                 <div>
                     <label for="tipo">Tipo</label>
                     <select name="tipo" id="tipo">
@@ -84,15 +89,25 @@
                     </select>
                 </div>
                 <div>
-                    <label for="nome">Nome</label>
-                        <input id="nome" type="text">
-                </div>
-                <div>
                     <label for="valor">Valor</label>
                     <input id="valor" type="number">
                 </div>
-                <button type="submit">Cadastrar</button>             
+                <button type="submit">Cadastrar</button>
             </form>
+            <!-- Lista de ingredientes cadastrados -->
+            <table id="listaIngredientes">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Tipo</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os ingredientes cadastrados serão listados aqui -->
+                </tbody>
+            </table>
+
         </section>
     </main>
     <script src="https://kit.fontawesome.com/dc950e0d8a.js" crossorigin="anonymous"></script>
