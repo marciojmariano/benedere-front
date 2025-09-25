@@ -5,14 +5,14 @@ console.table(ingredientes);
 
 
 function cadastrar($event) {
-    debugger
+
     $event.preventDefault(); //Garante que não vai enviar pra lugar nenhum os dados do form
     const campoTipo = document.getElementById("tipo");
     const campoNome = document.getElementById("nome");
     const campoValor = document.getElementById("valor");
     const tipo = campoTipo.value;
     const nome = campoNome.value;
-    const valor = campoValor.value;
+    const valor = parseFloat(campoValor.value);
     const id = crypto.randomUUID();
     console.log("Tipo: " + tipo + " - Nome: " + nome + " - Valor: " + valor);
     let ingrediente = {
@@ -22,14 +22,14 @@ function cadastrar($event) {
     localStorage.setItem("ingredientes", JSON.stringify(ingredientes));
     console.clear();
     console.table(ingredientes);
-    //localStorage.setItem("nome", nome);
-    //localStorage.setItem("tipo", tipo);
-    //localStorage.setItem("valor", valor);
+
+    // Atualiza a tabela com os novos dados
+    listarIngredientesTabela();
 }
 
 function carregarIngredientesLocalStorage() {
     let ingredientesLocalStorage = localStorage.getItem("ingredientes");
-    if (ingredientesLocalStorage == null) {
+    if (ingredientesLocalStorage === null) {
         //return []
         let massaDados = massaDeDados();
         localStorage.setItem("ingredientes", JSON.stringify(massaDados));
@@ -41,6 +41,12 @@ function carregarIngredientesLocalStorage() {
 
 function massaDeDados() {
     return [
+        {
+            id: crypto.randomUUID(),
+            nome: "Estrogonofe de carne",
+            tipo: "proteina",
+            valor: 20.0
+        },
         {
             id: crypto.randomUUID(),
             nome: "Filé de frango",
@@ -170,7 +176,14 @@ function listarIngredientesTabela() {
     const tabelaIngredientes = document.querySelector("#listaIngredientes tbody");
     tabelaIngredientes.innerHTML = "";
 
+    // Ordena os ingredientes em ordem alfabética pelo nome
+    ingredientes.sort((a, b) => {
+        // Converte os nomes para letras minúsculas para evitar problemas com maiúsculas/minúsculas
+        return a.nome.toLowerCase().localeCompare(b.nome.toLowerCase());
+    });
+
     ingredientes.forEach(ingrediente => {
+        console.log("Ingrediente:", ingrediente);
         const linha = document.createElement("tr");
 
         const colunaNome = document.createElement("td");
